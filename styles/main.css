@@ -7,8 +7,6 @@
 }
 
 .items{
-    padding-left: 1.3em;
-    margin-top: 0;
     line-height: 2;
 }
 
@@ -30,6 +28,12 @@ body{
     align-items: center;
     line-height: 1.6rem;
     min-height: 100vh;
+    counter-reset: counter;
+}
+
+.items p::before{
+    counter-increment: counter;
+    content: counter(counter) ": ";
 }
 
 a{
@@ -56,3 +60,4 @@ li{
     /* list-style-type: none; */
     margin: 10px 0;
 }
+
